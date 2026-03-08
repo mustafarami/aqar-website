@@ -42,7 +42,7 @@
 
     /* NAV — always LTR so logo stays top-left */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 41px; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 18px 40px;
       background: rgba(10,15,26,0.9);
@@ -88,7 +88,7 @@
       min-height: 100vh;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      text-align: center; padding: 130px 24px 80px;
+      text-align: center; padding: 170px 24px 80px;
       position: relative; z-index: 1;
     }
 
@@ -343,7 +343,7 @@
 <body>
 
   <!-- COMING SOON BANNER -->
-  <div id="topBanner" style="background: linear-gradient(90deg, #064e35, #065f46, #064e35); text-align: center; padding: 10px 24px; font-size: 13px; font-weight: 600; color: #34d399; letter-spacing: 0.5px; position: relative; z-index: 101;">
+  <div id="topBanner" style="background: linear-gradient(90deg, #064e35, #065f46, #064e35); text-align: center; padding: 10px 24px; font-size: 13px; font-weight: 600; color: #34d399; letter-spacing: 0.5px; position: fixed; top: 0; left: 0; right: 0; z-index: 101;">
     <span data-en="🚀 App coming soon to App Store & Google Play — Stay tuned!" data-ar="🚀 التطبيق قادم قريباً على App Store و Google Play — ابقَ على اطلاع!">🚀 App coming soon to App Store & Google Play — Stay tuned!</span>
   </div>
 

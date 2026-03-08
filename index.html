@@ -548,7 +548,7 @@
       <span class="section-label" data-en="Contact" data-ar="تواصل">Contact</span>
       <h2 class="section-title" data-en="Have questions? We'd love to hear from you." data-ar="هل لديك أسئلة؟ نرحب بتواصلك.">Have questions? We'd love to hear from you.</h2>
     </div>
-    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <form class="contact-form reveal" action="https://formspree.io/f/mqeyavga" method="POST">
       <div>
         <label class="form-label" data-en="Your Name" data-ar="اسمك">Your Name</label>
         <input class="form-input" type="text" required />
@@ -598,17 +598,6 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Contact form
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = isAr ? '✅ تم الإرسال!' : '✅ Sent!';
-      setTimeout(() => {
-        btn.textContent = isAr ? 'إرسال الرسالة' : 'Send Message';
-        e.target.reset();
-      }, 3000);
-    }
   </script>
 </body>
 </html>

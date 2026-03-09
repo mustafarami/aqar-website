@@ -4,120 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Aqar عقار</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #0a0f1a;
-      --card: #111827;
-      --border: #1e2d3d;
-      --primary: #34d399;
-      --text: #f1f5f9;
-      --muted: #64748b;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.8;
-    }
-
-    body.ar {
-      font-family: 'Noto Kufi Arabic', sans-serif;
-      direction: rtl;
-    }
-
-    nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 40px;
-      background: rgba(10,15,26,0.95);
-      border-bottom: 1px solid var(--border);
-      direction: ltr;
-    }
-
-    .nav-logo {
-      font-family: 'Georgia', serif;
-      font-size: 20px; font-weight: 900;
-      color: var(--primary); text-decoration: none;
-    }
-    .nav-logo span { color: var(--text); }
-
-    .lang-btn {
-      background: var(--card); border: 1px solid var(--border);
-      color: var(--text); padding: 7px 16px; border-radius: 100px;
-      font-size: 13px; font-weight: 600; cursor: pointer;
-      font-family: inherit;
-    }
-    .lang-btn:hover { border-color: var(--primary); }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 60px 24px 100px;
-    }
-
-    .page-title {
-      font-size: 36px; font-weight: 900;
-      margin-bottom: 8px; color: var(--text);
-    }
-
-    .page-date {
-      font-size: 13px; color: var(--muted);
-      margin-bottom: 48px;
-    }
-
-    h2 {
-      font-size: 18px; font-weight: 700;
-      color: var(--primary);
-      margin-top: 40px; margin-bottom: 12px;
-    }
-
-    p {
-      font-size: 15px; color: #94a3b8;
-      margin-bottom: 16px;
-    }
-
-    ul {
-      margin: 0 0 16px 20px;
-      color: #94a3b8;
-      font-size: 15px;
-    }
-    body.ar ul { margin: 0 20px 16px 0; }
-
-    li { margin-bottom: 8px; }
-
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 40px 0;
-    }
-
-    a { color: var(--primary); }
-
-    .contact-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 40px;
-    }
-
-    .contact-box p { margin: 0; }
-
-    footer {
-      text-align: center;
-      padding: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--muted);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
+  <nav class="privacy-nav" id="mainNav">
     <a href="index.html" class="nav-logo">Aqar <span>عقار</span></a>
     <button class="lang-btn" onclick="toggleLang()" id="langBtn">العربية</button>
   </nav>
@@ -125,100 +17,89 @@
   <div class="container">
 
     <div class="page-title" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</div>
-    <span data-en="© 2026 Aqar عقار. All rights reserved." data-ar="© 2026 عقار. جميع الحقوق محفوظة.">© 2026 Aqar عقار. All rights reserved.</span>
+    <div class="page-date" data-en="Last updated: March 2026" data-ar="آخر تحديث: مارس 2026">Last updated: March 2026</div>
 
-    <p data-en="This Privacy Policy describes how Aqar عقار ('we', 'us', or 'our') collects, uses, and shares information about you when you use our mobile application." data-ar="تصف سياسة الخصوصية هذه كيفية جمع تطبيق عقار ('نحن') للمعلومات واستخدامها ومشاركتها عند استخدامك للتطبيق.">
-      This Privacy Policy describes how Aqar عقار ("we", "us", or "our") collects, uses, and shares information about you when you use our mobile application.
-    </p>
+    <div class="privacy-body">
 
-    <hr class="divider" />
-
-    <h2 data-en="1. Information We Collect" data-ar="1. المعلومات التي نجمعها">1. Information We Collect</h2>
-    <p data-en="We collect the following information when you use Aqar:" data-ar="نجمع المعلومات التالية عند استخدامك لعقار:">We collect the following information when you use Aqar:</p>
-    <ul>
-      <li data-en="Email address and display name (when you register)" data-ar="عنوان البريد الإلكتروني والاسم المعروض (عند التسجيل)">Email address and display name (when you register)</li>
-      <li data-en="Listing information you provide (title, description, price, location, photos)" data-ar="معلومات الإعلان التي تقدمها (العنوان، الوصف، السعر، الموقع، الصور)">Listing information you provide (title, description, price, location, photos)</li>
-      <li data-en="Messages you send through the in-app chat" data-ar="الرسائل التي ترسلها عبر المحادثات داخل التطبيق">Messages you send through the in-app chat</li>
-      <li data-en="Device information and push notification tokens" data-ar="معلومات الجهاز ورموز الإشعارات">Device information and push notification tokens</li>
-      <li data-en="Photos you upload from your device" data-ar="الصور التي تحملها من جهازك">Photos you upload from your device</li>
-    </ul>
-
-    <h2 data-en="2. How We Use Your Information" data-ar="2. كيف نستخدم معلوماتك">2. How We Use Your Information</h2>
-    <p data-en="We use the information we collect to:" data-ar="نستخدم المعلومات التي نجمعها من أجل:">We use the information we collect to:</p>
-    <ul>
-      <li data-en="Provide and operate the Aqar marketplace" data-ar="تقديم وتشغيل منصة عقار">Provide and operate the Aqar marketplace</li>
-      <li data-en="Display your listings to other users" data-ar="عرض إعلاناتك للمستخدمين الآخرين">Display your listings to other users</li>
-      <li data-en="Enable real-time messaging between buyers and sellers" data-ar="تمكين المراسلة الفورية بين المشترين والبائعين">Enable real-time messaging between buyers and sellers</li>
-      <li data-en="Send push notifications about your listings and messages" data-ar="إرسال إشعارات حول إعلاناتك ورسائلك">Send push notifications about your listings and messages</li>
-      <li data-en="Improve the app experience" data-ar="تحسين تجربة التطبيق">Improve the app experience</li>
-    </ul>
-
-    <h2 data-en="3. How We Share Your Information" data-ar="3. كيف نشارك معلوماتك">3. How We Share Your Information</h2>
-    <p data-en="We do not sell your personal information. We share data only in these cases:" data-ar="لا نبيع معلوماتك الشخصية. نشارك البيانات فقط في هذه الحالات:">We do not sell your personal information. We share data only in these cases:</p>
-    <ul>
-      <li data-en="Listing information is visible to all users of the app" data-ar="معلومات الإعلان مرئية لجميع مستخدمي التطبيق">Listing information is visible to all users of the app</li>
-      <li data-en="Messages are only visible to the participants of that conversation" data-ar="الرسائل مرئية فقط للمشاركين في تلك المحادثة">Messages are only visible to the participants of that conversation</li>
-      <li data-en="We use Firebase (Google) for authentication and database storage" data-ar="نستخدم Firebase (Google) للمصادقة وتخزين البيانات">We use Firebase (Google) for authentication and database storage</li>
-      <li data-en="We use Cloudinary for photo storage" data-ar="نستخدم Cloudinary لتخزين الصور">We use Cloudinary for photo storage</li>
-    </ul>
-
-    <h2 data-en="4. Data Retention" data-ar="4. الاحتفاظ بالبيانات">4. Data Retention</h2>
-    <p data-en="We retain your data for as long as your account is active. You can delete your listings at any time from within the app. To delete your account and all associated data, contact us at the email below." data-ar="نحتفظ ببياناتك طالما حسابك نشط. يمكنك حذف إعلاناتك في أي وقت من داخل التطبيق. لحذف حسابك وجميع بياناتك، تواصل معنا عبر البريد الإلكتروني أدناه.">
-      We retain your data for as long as your account is active. You can delete your listings at any time from within the app. To delete your account and all associated data, contact us at the email below.
-    </p>
-
-    <h2 data-en="5. Your Rights" data-ar="5. حقوقك">5. Your Rights</h2>
-    <p data-en="You have the right to:" data-ar="لديك الحق في:">You have the right to:</p>
-    <ul>
-      <li data-en="Access the personal data we hold about you" data-ar="الوصول إلى بياناتك الشخصية التي نحتفظ بها">Access the personal data we hold about you</li>
-      <li data-en="Request correction of inaccurate data" data-ar="طلب تصحيح البيانات غير الدقيقة">Request correction of inaccurate data</li>
-      <li data-en="Request deletion of your data" data-ar="طلب حذف بياناتك">Request deletion of your data</li>
-      <li data-en="Withdraw consent at any time by deleting your account" data-ar="سحب موافقتك في أي وقت عن طريق حذف حسابك">Withdraw consent at any time by deleting your account</li>
-    </ul>
-
-    <h2 data-en="6. Children's Privacy" data-ar="6. خصوصية الأطفال">6. Children's Privacy</h2>
-    <p data-en="Aqar is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13." data-ar="لا يُخصص تطبيق عقار للأطفال دون سن 13 عامًا. لا نجمع بيانات شخصية من الأطفال دون سن 13 عن قصد.">
-      Aqar is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13.
-    </p>
-
-    <h2 data-en="7. Changes to This Policy" data-ar="7. التغييرات على هذه السياسة">7. Changes to This Policy</h2>
-    <p data-en="We may update this Privacy Policy from time to time. We will notify you of any changes by updating the date at the top of this page." data-ar="قد نحدّث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق تحديث التاريخ في أعلى هذه الصفحة.">
-      We may update this Privacy Policy from time to time. We will notify you of any changes by updating the date at the top of this page.
-    </p>
-
-    <hr class="divider" />
-
-    <div class="contact-box">
-      <h2 style="margin-top:0;" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
-      <p data-en="If you have any questions about this Privacy Policy, please contact us at:" data-ar="إذا كان لديك أي أسئلة حول سياسة الخصوصية، تواصل معنا على:">
-        If you have any questions about this Privacy Policy, please contact us at:
+      <p data-en="This Privacy Policy describes how Aqar عقار ('we', 'us', or 'our') collects, uses, and shares information about you when you use our mobile application." data-ar="تصف سياسة الخصوصية هذه كيفية جمع تطبيق عقار ('نحن') للمعلومات واستخدامها ومشاركتها عند استخدامك للتطبيق.">
+        This Privacy Policy describes how Aqar عقار ("we", "us", or "our") collects, uses, and shares information about you when you use our mobile application.
       </p>
-      <p style="margin-top:10px;">
-        <a href="https://mustafarami.github.io/aqar-website/#contact" style="color:#34d399;" data-en="Contact us via our website" data-ar="تواصل معنا عبر موقعنا">Contact us via our website</a>
+
+      <hr class="divider" />
+
+      <h2 data-en="1. Information We Collect" data-ar="1. المعلومات التي نجمعها">1. Information We Collect</h2>
+      <p data-en="We collect the following information when you use Aqar:" data-ar="نجمع المعلومات التالية عند استخدامك لعقار:">We collect the following information when you use Aqar:</p>
+      <ul>
+        <li data-en="Email address and display name (when you register)" data-ar="عنوان البريد الإلكتروني والاسم المعروض (عند التسجيل)">Email address and display name (when you register)</li>
+        <li data-en="Listing information you provide (title, description, price, location, photos)" data-ar="معلومات الإعلان التي تقدمها (العنوان، الوصف، السعر، الموقع، الصور)">Listing information you provide (title, description, price, location, photos)</li>
+        <li data-en="Messages you send through the in-app chat" data-ar="الرسائل التي ترسلها عبر المحادثات داخل التطبيق">Messages you send through the in-app chat</li>
+        <li data-en="Device information and push notification tokens" data-ar="معلومات الجهاز ورموز الإشعارات">Device information and push notification tokens</li>
+        <li data-en="Photos you upload from your device" data-ar="الصور التي تحملها من جهازك">Photos you upload from your device</li>
+      </ul>
+
+      <h2 data-en="2. How We Use Your Information" data-ar="2. كيف نستخدم معلوماتك">2. How We Use Your Information</h2>
+      <p data-en="We use the information we collect to:" data-ar="نستخدم المعلومات التي نجمعها من أجل:">We use the information we collect to:</p>
+      <ul>
+        <li data-en="Provide and operate the Aqar marketplace" data-ar="تقديم وتشغيل منصة عقار">Provide and operate the Aqar marketplace</li>
+        <li data-en="Display your listings to other users" data-ar="عرض إعلاناتك للمستخدمين الآخرين">Display your listings to other users</li>
+        <li data-en="Enable real-time messaging between buyers and sellers" data-ar="تمكين المراسلة الفورية بين المشترين والبائعين">Enable real-time messaging between buyers and sellers</li>
+        <li data-en="Send push notifications about your listings and messages" data-ar="إرسال إشعارات حول إعلاناتك ورسائلك">Send push notifications about your listings and messages</li>
+        <li data-en="Improve the app experience" data-ar="تحسين تجربة التطبيق">Improve the app experience</li>
+      </ul>
+
+      <h2 data-en="3. How We Share Your Information" data-ar="3. كيف نشارك معلوماتك">3. How We Share Your Information</h2>
+      <p data-en="We do not sell your personal information. We share data only in these cases:" data-ar="لا نبيع معلوماتك الشخصية. نشارك البيانات فقط في هذه الحالات:">We do not sell your personal information. We share data only in these cases:</p>
+      <ul>
+        <li data-en="Listing information is visible to all users of the app" data-ar="معلومات الإعلان مرئية لجميع مستخدمي التطبيق">Listing information is visible to all users of the app</li>
+        <li data-en="Messages are only visible to the participants of that conversation" data-ar="الرسائل مرئية فقط للمشاركين في تلك المحادثة">Messages are only visible to the participants of that conversation</li>
+        <li data-en="We use Firebase (Google) for authentication and database storage" data-ar="نستخدم Firebase (Google) للمصادقة وتخزين البيانات">We use Firebase (Google) for authentication and database storage</li>
+        <li data-en="We use Cloudinary for photo storage" data-ar="نستخدم Cloudinary لتخزين الصور">We use Cloudinary for photo storage</li>
+      </ul>
+
+      <h2 data-en="4. Data Retention" data-ar="4. الاحتفاظ بالبيانات">4. Data Retention</h2>
+      <p data-en="We retain your data for as long as your account is active. You can delete your listings at any time from within the app. To delete your account and all associated data, please contact us via our website." data-ar="نحتفظ ببياناتك طالما حسابك نشط. يمكنك حذف إعلاناتك في أي وقت من داخل التطبيق. لحذف حسابك وجميع بياناتك، تواصل معنا عبر موقعنا.">
+        We retain your data for as long as your account is active. You can delete your listings at any time from within the app. To delete your account and all associated data, please contact us via our website.
       </p>
+
+      <h2 data-en="5. Your Rights" data-ar="5. حقوقك">5. Your Rights</h2>
+      <p data-en="You have the right to:" data-ar="لديك الحق في:">You have the right to:</p>
+      <ul>
+        <li data-en="Access the personal data we hold about you" data-ar="الوصول إلى بياناتك الشخصية التي نحتفظ بها">Access the personal data we hold about you</li>
+        <li data-en="Request correction of inaccurate data" data-ar="طلب تصحيح البيانات غير الدقيقة">Request correction of inaccurate data</li>
+        <li data-en="Request deletion of your data" data-ar="طلب حذف بياناتك">Request deletion of your data</li>
+        <li data-en="Withdraw consent at any time by deleting your account" data-ar="سحب موافقتك في أي وقت عن طريق حذف حسابك">Withdraw consent at any time by deleting your account</li>
+      </ul>
+
+      <h2 data-en="6. Children's Privacy" data-ar="6. خصوصية الأطفال">6. Children's Privacy</h2>
+      <p data-en="Aqar is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13." data-ar="لا يُخصص تطبيق عقار للأطفال دون سن 13 عامًا. لا نجمع بيانات شخصية من الأطفال دون سن 13 عن قصد.">
+        Aqar is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13.
+      </p>
+
+      <h2 data-en="7. Changes to This Policy" data-ar="7. التغييرات على هذه السياسة">7. Changes to This Policy</h2>
+      <p data-en="We may update this Privacy Policy from time to time. We will notify you of any changes by updating the date at the top of this page." data-ar="قد نحدّث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق تحديث التاريخ في أعلى هذه الصفحة.">
+        We may update this Privacy Policy from time to time. We will notify you of any changes by updating the date at the top of this page.
+      </p>
+
+      <hr class="divider" />
+
+      <div class="contact-box">
+        <h2 style="margin-top:0;" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+        <p data-en="If you have any questions about this Privacy Policy, please contact us via our website:" data-ar="إذا كان لديك أي أسئلة حول سياسة الخصوصية، تواصل معنا عبر موقعنا:">
+          If you have any questions about this Privacy Policy, please contact us via our website:
+        </p>
+        <p style="margin-top:10px;">
+          <a href="https://mustafarami.github.io/aqar-website/#contact" data-en="Contact us via our website" data-ar="تواصل معنا عبر موقعنا">Contact us via our website</a>
+        </p>
+      </div>
+
     </div>
-
   </div>
 
   <footer>
-    <span data-en="© 2026 Aqar عقار. All rights reserved." data-ar="© 2026 عقار. جميع الحقوق محفوظة.">© 2026 Aqar عقار. All rights reserved.</span>
+    <div class="footer-logo">Aqar <span>عقار</span></div>
+    <span class="footer-text" data-en="© 2026 Aqar عقار. All rights reserved." data-ar="© 2026 عقار. جميع الحقوق محفوظة.">© 2026 Aqar عقار. All rights reserved.</span>
   </footer>
 
-  <script>
-    let isAr = false;
-
-    function toggleLang() {
-      isAr = !isAr;
-      const html = document.documentElement;
-      const btn = document.getElementById('langBtn');
-      html.lang = isAr ? 'ar' : 'en';
-      html.dir = isAr ? 'rtl' : 'ltr';
-      document.body.classList.toggle('ar', isAr);
-      btn.textContent = isAr ? 'English' : 'العربية';
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = isAr ? el.dataset.ar : el.dataset.en;
-      });
-    }
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -4,7 +4,19 @@
    ============================================ */
 
 /* ── Language toggle ── */
-let isAr = false;
+let isAr = true;
+
+// Apply Arabic on page load
+document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.lang = 'ar';
+  document.documentElement.dir = 'rtl';
+  document.body.classList.add('ar');
+  const btn = document.getElementById('langBtn');
+  if (btn) btn.textContent = 'English';
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    el.textContent = el.dataset.ar;
+  });
+});
 
 function toggleLang() {
   isAr = !isAr;

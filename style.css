@@ -232,6 +232,44 @@ nav.scrolled {
   box-shadow: 0 4px 20px rgba(52, 211, 153, 0.3);
 }
 
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ============================================
    HERO
    ============================================ */
@@ -1064,10 +1102,41 @@ body.ar .container ul {
   nav {
     top: 36px;
     padding: 12px 18px;
+    flex-wrap: wrap;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    order: 3;
+    padding: 8px 0 4px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  nav.open .nav-links li {
+    list-style: none;
+  }
+
+  nav.open .nav-links a {
+    display: block;
+    padding: 12px 4px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  nav.open .nav-links li:last-child a {
+    border-bottom: none;
   }
 
   .privacy-nav {
@@ -1077,5 +1146,17 @@ body.ar .container ul {
 
   .hero {
     padding-top: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

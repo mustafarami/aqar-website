@@ -27,6 +27,7 @@ function toggleLang() {
   html.dir = isAr ? 'rtl' : 'ltr';
   document.body.classList.toggle('ar', isAr);
   btn.textContent = isAr ? 'English' : 'العربية';
+  btn.setAttribute('aria-label', isAr ? 'Switch to English' : 'التبديل إلى العربية');
 
   document.querySelectorAll('[data-en]').forEach(el => {
     el.textContent = isAr ? el.dataset.ar : el.dataset.en;
@@ -39,6 +40,27 @@ if (nav) {
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
+}
+
+/* ── Mobile hamburger menu ── */
+const menuBtn = document.getElementById('menuBtn');
+if (menuBtn && nav) {
+  menuBtn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  // close the menu when a link is tapped
+  document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    });
+  });
 }
 
 /* ── Scroll reveal ── */
@@ -76,10 +98,21 @@ if (sections.length && navLinks.length) {
   sections.forEach(s => linkObserver.observe(s));
 }
 
-/* ── Smooth form submit feedback ── */
+/* ── Form submit ── */
 const form = document.querySelector('.contact-form');
 if (form) {
   form.addEventListener('submit', function (e) {
+    const name = form.querySelector('[name="name"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+
+    if (!name || !email || !message) {
+      e.preventDefault();
+      const msg = isAr ? 'يرجى ملء جميع الحقول.' : 'Please fill in all fields.';
+      alert(msg);
+      return;
+    }
+
     const btn = form.querySelector('.form-submit');
     btn.textContent = isAr ? 'جارٍ الإرسال...' : 'Sending...';
     btn.style.opacity = '0.7';
@@ -89,13 +122,18 @@ if (form) {
 
 /* ── Tilt effect on feature cards (subtle) ── */
 document.querySelectorAll('.feature-card').forEach(card => {
+  let raf;
   card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+    });
   });
   card.addEventListener('mouseleave', () => {
+    cancelAnimationFrame(raf);
     card.style.transform = '';
   });
 });

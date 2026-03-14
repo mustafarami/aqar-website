@@ -23,13 +23,18 @@
   <nav id="mainNav">
     <a href="#" class="nav-logo">Aqar <span>عقار</span></a>
     <div class="nav-right">
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#features" data-en="Features" data-ar="المميزات">Features</a></li>
         <li><a href="#download" data-en="Download" data-ar="تحميل">Download</a></li>
         <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
       </ul>
-      <button class="lang-btn" onclick="toggleLang()" id="langBtn">العربية</button>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn" aria-label="Switch to English">العربية</button>
       <a href="#download" class="nav-cta" data-en="Get the App" data-ar="حمّل التطبيق">Get the App</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -118,7 +123,7 @@
     </div>
     <div class="features-grid">
       <div class="feature-card reveal">
-        <span class="feature-icon">🏠</span>
+        <span class="feature-icon" aria-hidden="true">🏠</span>
         <div class="feature-title" data-en="Real Estate & Vehicles" data-ar="عقارات وسيارات">Real Estate & Vehicles
         </div>
         <div class="feature-desc" data-en="Browse apartments, houses, land, cars and motorbikes — all in one place."
@@ -126,7 +131,7 @@
           and motorbikes — all in one place.</div>
       </div>
       <div class="feature-card reveal">
-        <span class="feature-icon">💬</span>
+        <span class="feature-icon" aria-hidden="true">💬</span>
         <div class="feature-title" data-en="Real-time Messaging" data-ar="مراسلة فورية">Real-time Messaging</div>
         <div class="feature-desc"
           data-en="Chat directly with sellers, ask questions, and negotiate — all within the app."
@@ -134,7 +139,7 @@
           questions, and negotiate — all within the app.</div>
       </div>
       <div class="feature-card reveal">
-        <span class="feature-icon">📸</span>
+        <span class="feature-icon" aria-hidden="true">📸</span>
         <div class="feature-title" data-en="Photo Galleries" data-ar="معرض صور">Photo Galleries</div>
         <div class="feature-desc"
           data-en="Upload multiple photos per listing. Buyers swipe through fullscreen galleries."
@@ -142,7 +147,7 @@
           Buyers swipe through fullscreen galleries.</div>
       </div>
       <div class="feature-card reveal">
-        <span class="feature-icon">🌐</span>
+        <span class="feature-icon" aria-hidden="true">🌐</span>
         <div class="feature-title" data-en="Arabic & English" data-ar="عربي وإنجليزي">Arabic & English</div>
         <div class="feature-desc"
           data-en="Full RTL Arabic support. Switch languages instantly from your profile settings."
@@ -150,7 +155,7 @@
           languages instantly from your profile settings.</div>
       </div>
       <div class="feature-card reveal">
-        <span class="feature-icon">📍</span>
+        <span class="feature-icon" aria-hidden="true">📍</span>
         <div class="feature-title" data-en="All Syrian Cities" data-ar="جميع المدن السورية">All Syrian Cities</div>
         <div class="feature-desc"
           data-en="Smart city search with all Syrian cities preloaded. Type in Arabic or English."
@@ -158,7 +163,7 @@
           preloaded. Type in Arabic or English.</div>
       </div>
       <div class="feature-card reveal">
-        <span class="feature-icon">❤️</span>
+        <span class="feature-icon" aria-hidden="true">❤️</span>
         <div class="feature-title" data-en="Save Listings" data-ar="احفظ الإعلانات">Save Listings</div>
         <div class="feature-desc"
           data-en="Save your favorite listings to revisit later. Synced across all your devices."
@@ -214,8 +219,8 @@
       <p class="download-sub" data-en="Available soon on iOS and Android." data-ar="قريباً على iOS وAndroid.">Available
         soon on iOS and Android.</p>
       <div class="store-buttons">
-        <a href="#" class="store-btn">
-          <span class="store-icon">
+        <a href="#" class="store-btn" aria-label="Download on the App Store">
+          <span class="store-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
@@ -226,8 +231,8 @@
             <div class="store-btn-name">App Store</div>
           </div>
         </a>
-        <a href="#" class="store-btn">
-          <span class="store-icon">
+        <a href="#" class="store-btn" aria-label="Get it on Google Play">
+          <span class="store-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M3.18 23.76c.37.2.8.22 1.2.04l12.35-7.13-2.8-2.8-10.75 9.89z" fill="#EA4335" />
               <path d="M22.33 10.3L19.88 8.9l-3.15 3.1 3.15 3.1 2.47-1.43c.7-.4.7-1.37.01-1.77l-.03.4z"

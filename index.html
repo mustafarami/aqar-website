@@ -4,7 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqar عقار</title>
+  <title>Aqar 24 — عقار 24</title>
+  <meta name="description" content="Aqar 24 — Syria's marketplace for real estate and vehicles. Buy, sell, and rent apartments, houses, land, cars, and motorbikes. Free to use, in Arabic and English." />
+  <meta property="og:title" content="Aqar 24 — عقار 24" />
+  <meta property="og:description" content="Syria's marketplace for real estate and vehicles. Buy, sell, and rent — in Arabic and English." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Aqar 24 — عقار 24" />
+  <meta name="twitter:description" content="Syria's marketplace for real estate and vehicles. Free to use." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2334d399'/><text x='16' y='22' font-family='sans-serif' font-size='12' font-weight='900' fill='%23000' text-anchor='middle'>A24</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;600;700;900&display=swap"
     rel="stylesheet">
@@ -16,12 +26,12 @@
   <!-- COMING SOON BANNER -->
   <div id="topBanner">
     <span data-en="🚀 App coming soon to App Store & Google Play — Stay tuned!"
-      data-ar="🚀 التطبيق قادم قريباً على App Store و Google Play!">
+      data-ar="🚀 التطبيق قادم قريباً على App Store و Google Play!">🚀 التطبيق قادم قريباً على App Store و Google Play!</span>
   </div>
 
   <!-- NAV -->
   <nav id="mainNav">
-    <a href="#" class="nav-logo">Aqar <span>عقار</span></a>
+    <a href="#" class="nav-logo">Aqar <span>24</span></a>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
         <li><a href="#features" data-en="Features" data-ar="المميزات">Features</a></li>
@@ -42,7 +52,7 @@
   <section class="hero">
     <h1 class="hero-title">
       <span data-en="Find your place." data-ar="ابحث عن مكانك.">Find your place.</span><br>
-      <span class="hero-title-ar" data-en="Aqar عقار" data-ar="عقار — بيتك هنا">Aqar عقار</span>
+      <span class="hero-title-ar" data-en="Aqar 24" data-ar="عقار 24 — بيتك هنا">Aqar 24</span>
     </h1>
     <p class="hero-sub"
       data-en="Syria's marketplace for real estate and vehicles. Buy, sell, and rent — in Arabic and English."
@@ -59,7 +69,7 @@
         <div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="ps-header">
-            <div class="ps-logo">Aqar عقار</div>
+            <div class="ps-logo">Aqar 24</div>
             <div class="ps-sub">منصة العقارات</div>
           </div>
           <div class="ps-search">🔍 Search apartments, land, cars...</div>
@@ -117,7 +127,7 @@
   <!-- FEATURES -->
   <section class="features" id="features">
     <div class="reveal">
-      <span class="section-label" data-en="Why Aqar" data-ar="لماذا عقار">Why Aqar</span>
+      <span class="section-label" data-en="Why Aqar 24" data-ar="لماذا عقار 24">Why Aqar 24</span>
       <h2 class="section-title" data-en="Everything you need in one app." data-ar="كل ما تحتاجه في تطبيق واحد.">
         Everything you need in one app.</h2>
     </div>
@@ -214,8 +224,7 @@
   <!-- DOWNLOAD -->
   <section class="download" id="download">
     <div class="download-card reveal">
-      <div class="download-title" data-en="Get Aqar on your phone." data-ar="حمّل عقار على هاتفك.">Get Aqar on your
-        phone.</div>
+      <div class="download-title" data-en="Get Aqar 24 on your phone." data-ar="حمّل عقار 24 على هاتفك.">Get Aqar 24 on your phone.</div>
       <p class="download-sub" data-en="Available soon on iOS and Android." data-ar="قريباً على iOS وAndroid.">Available
         soon on iOS and Android.</p>
       <div class="store-buttons">
@@ -265,25 +274,28 @@
       <div>
         <label class="form-label" data-en="Your Name" data-ar="اسمك">Your Name</label>
         <input class="form-input" type="text" name="name" required />
+        <div class="form-error" id="error-name"></div>
       </div>
       <div>
         <label class="form-label" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
         <input class="form-input" type="email" name="email" required />
+        <div class="form-error" id="error-email"></div>
       </div>
       <div>
         <label class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
         <textarea class="form-textarea" name="message" required></textarea>
+        <div class="form-error" id="error-message"></div>
       </div>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
       <button class="form-submit" type="submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
     </form>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Aqar <span>عقار</span></div>
-    <p class="footer-text" data-en="© 2026 Aqar عقار. Syria's real estate & vehicle marketplace."
-      data-ar="© 2026 عقار. منصة العقارات والسيارات في سوريا.">© 2026 Aqar عقار. Syria's real estate & vehicle
-      marketplace.</p>
+    <div class="footer-logo">Aqar <span>24</span></div>
+    <p class="footer-text" data-en="© 2026 Aqar 24. Syria's real estate & vehicle marketplace."
+      data-ar="© 2026 عقار 24. منصة العقارات والسيارات في سوريا.">© 2026 Aqar 24. Syria's real estate & vehicle marketplace.</p>
     <a href="privacy.html" class="footer-privacy" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
   </footer>
 

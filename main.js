@@ -1,5 +1,5 @@
 /* ============================================
-   AQAR عقار — main.js
+   AQAR 24 — عقار 24 — main.js
    Shared across index.html and privacy.html
    ============================================ */
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('langBtn');
   if (btn) btn.textContent = 'English';
   document.querySelectorAll('[data-ar]').forEach(el => {
-    el.textContent = el.dataset.ar;
+    el.innerHTML = el.dataset.ar;
   });
 });
 
@@ -30,7 +30,7 @@ function toggleLang() {
   btn.setAttribute('aria-label', isAr ? 'Switch to English' : 'التبديل إلى العربية');
 
   document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = isAr ? el.dataset.ar : el.dataset.en;
+    el.innerHTML = isAr ? el.dataset.ar : el.dataset.en;
   });
 }
 
@@ -93,7 +93,7 @@ if (sections.length && navLinks.length) {
         if (active) active.classList.add('active');
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   sections.forEach(s => linkObserver.observe(s));
 }
@@ -106,12 +106,27 @@ if (form) {
     const email = form.querySelector('[name="email"]').value.trim();
     const message = form.querySelector('[name="message"]').value.trim();
 
-    if (!name || !email || !message) {
+    document.querySelectorAll('.form-error').forEach(el => { el.textContent = ''; });
+    let hasError = false;
+    if (!name) {
       e.preventDefault();
-      const msg = isAr ? 'يرجى ملء جميع الحقول.' : 'Please fill in all fields.';
-      alert(msg);
-      return;
+      const el = document.getElementById('error-name');
+      if (el) el.textContent = isAr ? 'يرجى إدخال اسمك.' : 'Please enter your name.';
+      hasError = true;
     }
+    if (!email) {
+      e.preventDefault();
+      const el = document.getElementById('error-email');
+      if (el) el.textContent = isAr ? 'يرجى إدخال بريدك الإلكتروني.' : 'Please enter your email.';
+      hasError = true;
+    }
+    if (!message) {
+      e.preventDefault();
+      const el = document.getElementById('error-message');
+      if (el) el.textContent = isAr ? 'يرجى كتابة رسالتك.' : 'Please enter your message.';
+      hasError = true;
+    }
+    if (hasError) return;
 
     const btn = form.querySelector('.form-submit');
     btn.textContent = isAr ? 'جارٍ الإرسال...' : 'Sending...';
